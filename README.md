@@ -1,3 +1,11 @@
+ITSA-5501-Project/
+├── docker/
+├── k8s/
+├── iac/
+└── README.md
+
+
+
 ## Tools Used
 - Git
 - GitHub
