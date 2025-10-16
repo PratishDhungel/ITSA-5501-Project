@@ -1,3 +1,7 @@
+## Name: PRATISH DHUNGEL, JOEL NNAEMEKA NDU
+## Student no: N01736801, N01746404
+
+
 ITSA-5501-Project/
 ├── docker/
 ├── k8s/
