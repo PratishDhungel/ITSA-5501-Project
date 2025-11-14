@@ -57,6 +57,25 @@ git push origin v1.0
 
 ## 🐳 Docker Compose Setup (Milestone 2)
 
+ITSA-5501-Project/
+├── docker/
+│   ├── docker-compose.yml        # Multi-container setup (frontend, DBs, cache, Prometheus)
+│   └── *other docker files*
+│
+├── frontend/
+│   └── index.html                # Static HTML webpage for vacation destination
+│
+├── k8s/                          # (Same as Milestone 1, untouched for this milestone)
+│   └── *Kubernetes manifests*
+│
+├── iac/                          # Infrastructure-as-Code (same as Milestone 1)
+│   └── *Terraform / Ansible files*
+│
+├── prometheus.yml                # Prometheus monitoring configuration (scrape settings)
+│
+└── README.md                     # Updated with Docker Compose + container operations
+
+
 ### Services
 | Service | Image | Description | Port |
 |----------|--------|-------------|------|
