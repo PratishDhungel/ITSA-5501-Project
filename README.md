@@ -53,3 +53,30 @@ git pull origin main
 # Tag versions
 git tag -a v1.0 -m "Milestone 1 complete"
 git push origin v1.0
+
+
+## 🐳 Docker Compose Setup (Milestone 2)
+
+### Services
+| Service | Image | Description | Port |
+|----------|--------|-------------|------|
+| frontend | nginx:alpine | Serves static HTML from `frontend/` | 9090 |
+| user-db | mongo | Stores user data (persistent volume `user_data`) | internal |
+| product-db | postgres | Product data storage with env vars | internal |
+| cache | redis | Caching service | internal |
+| prometheus | prom/prometheus | Monitoring endpoint | 9091 |
+
+### Volumes
+- `user_data` → persists MongoDB data  
+- `product_data` → persists PostgreSQL data  
+
+### Network
+- `app-network` → internal bridge for inter-container communication  
+
+### Operations
+```bash
+cd docker
+docker-compose up -d          # start all containers
+docker ps                     # list running containers
+docker-compose up -d --scale frontend=3  # scale frontend service
+docker-compose down           # stop and remove containers
